@@ -9,8 +9,6 @@
     "vanessa": {
         "--vanessasettings": "tools/VBParams.json",
         "--workspace": ".",
-        "--pathvanessa": ".",
-        "--additional": "/DisplayAllFunctions /L ru",
-		"--StartFeaturePlayer": true 
+        "--additional": "/DisplayAllFunctions /L ru"
     }
 }
