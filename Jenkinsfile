@@ -48,11 +48,11 @@ pipeline {
 
                 allure includeProperties: false, jdk: '', results: [[path: 'build/out/allure']]
             }
-           def file = readFile "${env.WORKSPACE}/build/out/vbOnline.log"
+           String fileContents = new File("${env.WORKSPACE}/build/out/vbOnline.log").text
            
             emailext (
         subject: "Job '${env.JOB_NAME} ${env.BUILD_NUMBER}'",
-        body: file,
+        body: fileContents,
         to: "Kalinin-VA@Part-kom.ru",
         from: "support@Part-kom.ru"
     )
