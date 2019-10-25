@@ -48,7 +48,9 @@ pipeline {
 
                 allure includeProperties: false, jdk: '', results: [[path: 'build/out/allure']]
             }
-           String fileContents = new File("${env.WORKSPACE}/build/out/vbOnline.log").text
+           
+           ReportPath = "${env.WORKSPACE}/build/build/out/vbOnline.log"
+           String fileContents = new File(ReportPath).text
            
             emailext (
         subject: "Job '${env.JOB_NAME} ${env.BUILD_NUMBER}'",
