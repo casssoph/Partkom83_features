@@ -3,7 +3,7 @@
        "--ibconnection": "/Snng9-v-1c-06\Partkom_Lyubavin_Compact",
        "--db-user": "Autotest",
         "--db-pwd": "YXxXNtGF8Q",
-        "--ordinaryapp": "0",
+        "--ordinaryapp": "1",
 		"--additional": "/Debug"
     },
     "vanessa": {
