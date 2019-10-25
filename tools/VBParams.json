@@ -1,31 +1,19 @@
 {
-    "ВыполнитьСценарии": true,
-    "ЗавершитьРаботуСистемы": true,
-    "ВыводитьСообщенияВФайл": "$workspaceRoot/build/out/vb.log",
-    "ЗакрытьTestClientПослеЗапускаСценариев": true,
+    "ВыполнитьСценарии": "Истина",
+    "ЗавершитьРаботуСистемы": "Истина",
+	"StartFeaturePlayer":"Истина",
+	"ВыводитьСообщенияВФайл": "$workspaceRoot/build/out/vb.log",
+	"ЗакрытьTestClientПослеЗапускаСценариев": "Истина",
     "КаталогФич": "$workspaceRoot/features",
     "КаталогиБиблиотек": [
         "./features/Libraries"
     ],
-    "СписокТеговИсключение":[
-        "IgnoreOnCIMainBuild",
-        "Draft"
-    ],
-    "ДелатьОтчетВФорматеАллюр": true,
+    "ДелатьОтчетВФорматеАллюр": "Истина",
     "КаталогOutputAllureБазовый": "$workspaceRoot/build/out/allure",
-    "ВРЕМЕННО_ОТКЛЮЧЕН_ДелатьОтчетВФорматеCucumberJson": true,
-    "ВРЕМЕННО_ОТКЛЮЧЕН_КаталогOutputCucumberJson": "$workspaceRoot/build/out/cucumber",
-    "ВыгружатьСтатусВыполненияСценариевВФайл": true,
+    "ВыгружатьСтатусВыполненияСценариевВФайл": "Истина",
     "ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев": "$workspaceRoot/build/out/buildStatus.log",
-    "ДелатьЛогВыполненияСценариевВТекстовыйФайл": true,
-    "ИмяФайлаЛогВыполненияСценариев": "$workspaceRoot/build/out/vbOnline.log",
-    "ДелатьОтчетВФорматеjUnit": true,
-    "КаталогOutputjUnit": "$workspaceRoot/build/out/bdd-junitreport",
-    "ДелатьСкриншотПриВозникновенииОшибки": true,
-    "СниматьСкриншотКаждогоОкна1С": false,
-    "КаталогOutputСкриншоты": "$workspaceRoot/build/out/allure",
-    "КомандаСделатьСкриншот": "nircmd savescreenshot ",
-    "ПутьКRunSikulix": "tools/sikulix/runsikulix.cmd",
-    "ПоставщикПользовательскихНастроек": "",
-    "АдресПользовательскихНастроек": ""
-}
+	"ПоставщикПользовательскихНастроек": "",
+    "АдресПользовательскихНастроек": "",
+	"ДелатьЛогВыполненияСценариевВТекстовыйФайл": "Истина",
+    "ИмяФайлаЛогВыполненияСценариев": "$workspaceRoot/build/out/vbOnline.log"
+ }
