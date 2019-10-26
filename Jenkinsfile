@@ -50,7 +50,7 @@ pipeline {
               
                ReportPath = "${env.WORKSPACE}/build/build/out/vbOnline.log"
          // String fileContents = new File(ReportPath).text
-           String fileContents = readFile " "${env.WORKSPACE}/build/build/out/vbOnline.log"
+           String fileContents = readFile "${env.WORKSPACE}/build/build/out/vbOnline.log"
             
             }
            
