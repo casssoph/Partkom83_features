@@ -61,8 +61,8 @@ pipeline {
             emailext (
         subject: "Job '${env.JOB_NAME} ${env.BUILD_NUMBER}'",
         body: fileContents,
-        to: "Kalinin-VA@Part-kom.ru",
-        from: "support@Part-kom.ru"
+        to: "Kalinin-VA",
+        from: "support"
     )
            
         }
