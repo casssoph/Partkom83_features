@@ -49,8 +49,8 @@ pipeline {
                 allure includeProperties: false, jdk: '', results: [[path: 'build/out/allure']]
               
                ReportPath = "${env.WORKSPACE}/build/build/out/vbOnline.log"
-           String fileContents = new File(ReportPath).text
-           
+         // String fileContents = new File(ReportPath).text
+           String fileContents = readFile " "${env.WORKSPACE}/build/build/out/vbOnline.log"
             
             }
            
