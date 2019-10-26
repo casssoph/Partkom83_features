@@ -51,7 +51,7 @@ pipeline {
         //       ReportPath = "${env.WORKSPACE}/build/build/out/vbOnline.log"
          // String fileContents = new File(ReportPath).text
     //       String fileContents = readFile "${env.WORKSPACE}/build/build/out/vbOnline.log"
-           String fileContents = "Автотестирование завершено со статусом  ${currentBuild.result} \n  Отчет о ходе выполнения теста доступен по адрессу http://nng9-w-it-63:8080/job/Partkom83_Autotest/${BUILD_NUMBER}/allure/
+           String fileContents = "Автотестирование завершено со статусом  ${currentBuild.result}  Отчет о ходе выполнения теста доступен по адрессу http://nng9-w-it-63:8080/job/Partkom83_Autotest/${env.BUILD_NUMBER}/allure/
                
             
             }
