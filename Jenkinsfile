@@ -58,7 +58,8 @@ pipeline {
             emailext (
         subject: "Job '${env.JOB_NAME} ${env.BUILD_NUMBER}'",
         body: "Автотестирование завершено со статусом  ${currentBuild.result} /n Отчет о ходе выполнения теста доступен по адрессу http://nng9-w-it-63:8080/job/Partkom83_Autotest/${env.BUILD_NUMBER}/allure/",
-        to: "Kalinin-VA"
+        to: "Kalinin-VA",
+        from: "Support"
     )
            
         }
