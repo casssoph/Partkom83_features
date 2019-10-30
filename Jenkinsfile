@@ -21,10 +21,10 @@ pipeline {
     }
     stages {
         stage("Тестирование ADD") {
-           timeout(time: 5, unit: 'MINUTES')
-               {
            steps {
-                timestamps {
+               
+                timeout(time: 5, unit: 'MINUTES')
+               {
                     script {
                         // Запускаем ADD тестирование на произвольной базе, сохранившейся в переменной testbaseConnString
                          returnCode = utils.cmd("runner vanessa --settings tools/vrunner.json --ordinaryapp 1")
