@@ -21,7 +21,9 @@ pipeline {
     }
     stages {
         stage("Тестирование ADD") {
-            steps {
+           timeout(time: 5, unit: 'MINUTES')
+               {
+           steps {
                 timestamps {
                     script {
                         // Запускаем ADD тестирование на произвольной базе, сохранившейся в переменной testbaseConnString
@@ -32,6 +34,7 @@ pipeline {
                         }
                     }
                 }
+           }
             }
         }
     }   
