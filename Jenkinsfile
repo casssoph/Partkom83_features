@@ -63,16 +63,14 @@ returnCode =0;
         int diff = 50 + (endDate1.getTime() - startDate1.getTime()) / (1000L*60L*60L*24L*7); 
              currentBuild.displayName = "1.0.4.${diff}";
                   currentBuild.description = "#1.0.4.${diff}";
-               
-               
-               
+                        
             }
 
   
            
             emailext (
-        subject: "Job '${env.JOB_NAME} ${env.BUILD_NUMBER}'",
-        body: "Автотестирование завершено со статусом  ${currentBuild.result} /n Отчет о ходе выполнения теста доступен по адрессу http://nng9-w-it-63:8080/job/Partkom83_Autotest/${env.BUILD_NUMBER}/allure/",
+        subject: "Job '${env.JOB_NAME} ${currentBuild.displayName}'",
+        body: "Автотестирование завершено со статусом  ${currentBuild.result} <br> Отчет о ходе выполнения теста доступен по адрессу http://nng9-w-it-63:8080/job/Partkom83_Autotest/${env.BUILD_NUMBER}/allure/",
         to: "Kalinin-VA;Hudin-VV;Lyubavin-NA"
     )
            
