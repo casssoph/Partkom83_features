@@ -59,10 +59,13 @@ pipeline {
         Date endDate1   = new Date();;
 
         int diff = 50 + (endDate1.getTime() - startDate1.getTime()) / (1000L*60L*60L*24L*7);
+             currentBuild.displayName = "1.0.4.${diff}";
+                  currentBuild.description = "#1.0.4.${diff}";
+               
+               
                
             }
-offset = 5
-currentBuild.displayName = "1.0.4.${diff}"
+
   
            
             emailext (
