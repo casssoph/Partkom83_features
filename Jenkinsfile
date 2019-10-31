@@ -27,11 +27,11 @@ pipeline {
                {
                     script {
                         // Запускаем ADD тестирование на произвольной базе, сохранившейся в переменной testbaseConnString
-                         returnCode = utils.cmd("runner vanessa --settings tools/vrunner.json --ordinaryapp 1")
+                  //       returnCode = utils.cmd("runner vanessa --settings tools/vrunner.json --ordinaryapp 1")
 
-                        if (returnCode != 0) {
-                            utils.raiseError("Возникла ошибка при запуске ADD на сервере ${server1c} и базе ${testbase}")
-                        }
+                   //     if (returnCode != 0) {
+                   //         utils.raiseError("Возникла ошибка при запуске ADD на сервере ${server1c} и базе ${testbase}")
+                 //       }
                     }
                 }
              }
