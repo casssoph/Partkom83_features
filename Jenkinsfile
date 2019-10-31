@@ -56,7 +56,13 @@ pipeline {
          //  String fileContents = "Автотестирование завершено со статусом  ${currentBuild.result} /n Отчет о ходе выполнения теста доступен по адрессу http://nng9-w-it-63:8080/job/Partkom83_Autotest/${env.BUILD_NUMBER}/allure/"
       
             }
+     
+        Date startDate1 = new GregorianCalendar(2019, 9, 16, 00, 00).getTime();
+        Date endDate1   = new Date();;
 
+        int diff = 50 + (endDate1.getTime() - startDate1.getTime()) / (1000L*60L*60L*24L*7);
+         Jenkins.instance.getItemByFullName("1.0.4.${diff}").updateNextBuildNumber(diff) 
+           
             emailext (
         subject: "Job '${env.JOB_NAME} ${env.BUILD_NUMBER}'",
         body: "Автотестирование завершено со статусом  ${currentBuild.result} /n Отчет о ходе выполнения теста доступен по адрессу http://nng9-w-it-63:8080/job/Partkom83_Autotest/${env.BUILD_NUMBER}/allure/",
