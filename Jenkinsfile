@@ -62,7 +62,7 @@ pipeline {
                
             }
 offset = 5
-currentBuild.displayName = "1.0.4." + (diff)
+currentBuild.displayName = "1.0.4.${diff}"
   
            
             emailext (
