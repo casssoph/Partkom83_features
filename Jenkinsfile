@@ -61,8 +61,10 @@ pipeline {
         int diff = 50 + (endDate1.getTime() - startDate1.getTime()) / (1000L*60L*60L*24L*7);
                
             }
-
-         Jenkins.instance.getItemByFullName("1.0.4.52").updateNextBuildNumber(diff) 
+def job = Jenkins.instance.getItem("1.0.4.52")
+job.nextBuildNumber = diff
+job.saveNextBuildNumber()
+  
            
             emailext (
         subject: "Job '${env.JOB_NAME} ${env.BUILD_NUMBER}'",
