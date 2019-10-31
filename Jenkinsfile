@@ -39,7 +39,12 @@ returnCode =0;
     }   
     post {
         always {
-            script {
+              Date startDate1 = new Date(119, 9, 16);
+        Date endDate1   = new Date();;
+
+        int diff = 50 + (endDate1.getTime() - startDate1.getTime()) / (1000L*60L*60L*24L*7)
+           
+           script {
                 if (currentBuild.result == "ABORTED") {
                     return
                 }
@@ -55,10 +60,7 @@ returnCode =0;
     //     String fileContents = readFile "${env.WORKSPACE}/build/build/out/vbOnline.log"
          //  String fileContents = "Автотестирование завершено со статусом  ${currentBuild.result} /n Отчет о ходе выполнения теста доступен по адрессу http://nng9-w-it-63:8080/job/Partkom83_Autotest/${env.BUILD_NUMBER}/allure/"
            
-        Date startDate1 = new Date(119, 9, 16);
-        Date endDate1   = new Date();;
-
-        int diff = 50 + (endDate1.getTime() - startDate1.getTime()) / (1000L*60L*60L*24L*7);
+  ;
              currentBuild.displayName = "1.0.4.${diff}";
                   currentBuild.description = "#1.0.4.${diff}";
                
