@@ -23,7 +23,7 @@ pipeline {
         stage("Тестирование ADD") {
            steps {
                
-                timeout(time: 30, unit: 'MINUTES')
+                timeout(time: 45, unit: 'MINUTES')
                {
                     script {
                         // Запускаем ADD тестирование на произвольной базе, сохранившейся в переменной testbaseConnString
