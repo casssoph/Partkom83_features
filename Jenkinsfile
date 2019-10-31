@@ -62,7 +62,7 @@ pipeline {
                
             }
 
-         Jenkins.instance.getItemByFullName("1.0.4.${diff}").updateNextBuildNumber(diff) 
+         Jenkins.instance.getItemByFullName("1.0.4.52").updateNextBuildNumber(diff) 
            
             emailext (
         subject: "Job '${env.JOB_NAME} ${env.BUILD_NUMBER}'",
