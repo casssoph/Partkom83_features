@@ -70,9 +70,9 @@ pipeline {
             emailext (
         subject: "Job '${env.JOB_NAME} ${currentBuild.displayName}'",
         body: "Автотестирование завершено со статусом  ${currentBuild.result} <br> Отчет о ходе выполнения теста доступен по адрессу http://nng9-w-it-63:8080/job/Partkom83_Autotest/${env.BUILD_NUMBER}/allure/",
-        to: "Kalinin-VA"
+        to: "Kalinin-VA;Hudin-VV;Lyubavin-NA "
     )
-      //;Hudin-VV;Lyubavin-NA     
+      
         }
     }
 }
