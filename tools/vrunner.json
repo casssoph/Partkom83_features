@@ -1,6 +1,6 @@
 {
     "default": {
-       "--ibconnection": "/Snng9-v-1c-06\Partkom_Lyubavin_Compact",
+       "--ibconnection": "/Sv-1c-13:1641\pre_release_test",
        "--db-user": "Autotest",
         "--db-pwd": "YXxXNtGF8Q",
         "--ordinaryapp": "1",
